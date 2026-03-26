@@ -22,13 +22,13 @@ const CtaSection = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="accent" size="xl" asChild>
-              <a href="https://wa.me/" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/34622568843" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="mr-2" />
                 Contactar por WhatsApp
               </a>
             </Button>
             <Button size="xl" className="bg-section-dark-foreground/10 text-section-dark-foreground border border-section-dark-foreground/20 hover:bg-section-dark-foreground/20" asChild>
-              <a href="tel:">
+              <a href="tel:+34622568843">
                 <Phone className="mr-2" />
                 Llamar
               </a>
