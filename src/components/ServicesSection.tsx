@@ -64,8 +64,8 @@ const ServicesSection = () => {
 
           {/* Automation */}
           <div className="bg-background rounded-2xl p-8 border border-border shadow-sm">
-            <div className="inline-flex items-center gap-2 mb-6 px-3 py-1 rounded-full bg-destructive/10 text-destructive text-sm font-medium">
-              <span className="w-2 h-2 rounded-full bg-destructive" />
+            <div className="inline-flex items-center gap-2 mb-6 px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-medium">
+              <span className="w-2 h-2 rounded-full bg-accent" />
               Automatización e IA
             </div>
             <div className="space-y-1">

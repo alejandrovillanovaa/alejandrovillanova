@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import aboutLogo from "@/assets/about-logo.png";
 
 const AboutSection = () => {
   return (
@@ -12,9 +13,7 @@ const AboutSection = () => {
         >
           {/* Avatar placeholder */}
           <div className="flex justify-center">
-            <div className="w-56 h-56 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/20 flex items-center justify-center">
-              <span className="font-display text-6xl font-bold gradient-text">?</span>
-            </div>
+            <img src={aboutLogo} alt="Alejandro Villanova" className="w-56 h-56 rounded-2xl object-contain" />
           </div>
 
           <div>
