@@ -21,7 +21,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         <a href="#" className="font-display text-xl font-bold tracking-tight text-foreground">
-          tu<span className="gradient-text">marca</span>
+          Alejandro<span className="gradient-text"> Villanova</span>
         </a>
 
         {/* Desktop */}
