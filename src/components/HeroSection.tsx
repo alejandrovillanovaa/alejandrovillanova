@@ -25,7 +25,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-            Mejoro tu presencia online y automatizo tareas para que tu negocio crezca de forma más eficiente.
+            Mejoro tu presencia online y automatizo tareas para que tengas más tiempo para tu negocio.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
