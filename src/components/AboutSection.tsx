@@ -25,7 +25,7 @@ const AboutSection = () => {
                 Trabajo ayudando a negocios a crecer con tecnología. Mi objetivo es que consigas más clientes y simplifiques tu día a día.
               </p>
               <p>
-                He comenzado trabajando con bares y negocios locales, donde he visto de primera mano cómo pequeñas mejoras pueden marcar una gran diferencia.
+                Comencé a trabajar con bares y negocios locales, donde vi de primera mano cómo pequeñas mejoras pueden marcar una gran diferencia.
               </p>
             </div>
           </div>
