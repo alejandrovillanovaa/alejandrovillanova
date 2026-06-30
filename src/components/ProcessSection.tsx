@@ -1,5 +1,8 @@
+import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import { Search, Lightbulb, Wrench, BarChart3 } from "lucide-react";
+
+const FloatingShapes = lazy(() => import("@/components/three/FloatingShapes"));
 
 const steps = [
   { icon: Search, num: "01", title: "Analizo tu negocio", desc: "Entiendo tu situación actual y tus objetivos" },
@@ -10,8 +13,13 @@ const steps = [
 
 const ProcessSection = () => {
   return (
-    <section id="proceso" className="section-padding bg-section-subtle">
-      <div className="max-w-5xl mx-auto">
+    <section id="proceso" className="section-padding bg-section-subtle relative overflow-hidden">
+      {/* 3D floating shapes background */}
+      <Suspense fallback={null}>
+        <FloatingShapes count={8} color="#0d9488" />
+      </Suspense>
+
+      <div className="max-w-5xl mx-auto relative" style={{ zIndex: 1 }}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

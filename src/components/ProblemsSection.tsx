@@ -1,5 +1,8 @@
+import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import { AlertTriangle, Eye, Clock, Cpu } from "lucide-react";
+
+const ParticleField = lazy(() => import("@/components/three/ParticleField"));
 
 const problems = [
   { icon: Eye, text: "No destacan en internet" },
@@ -18,8 +21,13 @@ const fadeUp = {
 
 const ProblemsSection = () => {
   return (
-    <section className="section-padding bg-section-dark text-section-dark-foreground">
-      <div className="max-w-5xl mx-auto text-center">
+    <section className="section-padding bg-section-dark text-section-dark-foreground relative overflow-hidden">
+      {/* 3D particle field */}
+      <Suspense fallback={null}>
+        <ParticleField count={100} color="#2dd4bf" speed={0.25} />
+      </Suspense>
+
+      <div className="max-w-5xl mx-auto text-center relative" style={{ zIndex: 1 }}>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

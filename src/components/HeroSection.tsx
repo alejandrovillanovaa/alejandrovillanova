@@ -1,15 +1,23 @@
+import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
+const HeroScene = lazy(() => import("@/components/three/HeroScene"));
+
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center section-padding pt-32">
-      {/* Subtle grid bg */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border)/0.3)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.3)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
-      <div className="absolute top-20 right-10 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[120px]" />
+    <section className="relative min-h-screen flex items-center section-padding pt-32 overflow-hidden">
+      {/* 3D background scene */}
+      <Suspense fallback={null}>
+        <HeroScene />
+      </Suspense>
 
-      <div className="relative max-w-5xl mx-auto">
+      {/* Subtle grid overlay */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border)/0.15)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.15)_1px,transparent_1px)] bg-[size:4rem_4rem]" style={{ zIndex: 1 }} />
+      <div className="absolute top-20 right-10 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px]" style={{ zIndex: 1 }} />
+
+      <div className="relative max-w-5xl mx-auto" style={{ zIndex: 2 }}>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}

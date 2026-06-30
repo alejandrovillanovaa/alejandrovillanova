@@ -1,8 +1,10 @@
+import { LegalFooter } from "@/legal";
+
 const Footer = () => (
-  <footer className="bg-section-dark border-t border-section-dark-foreground/10 py-8 px-6 text-center">
-    <p className="text-section-dark-foreground/40 text-sm">
-      © {new Date().getFullYear()} Alejandro Villanova. Todos los derechos reservados.
-    </p>
+  <footer className="bg-section-dark border-t border-section-dark-foreground/10 py-8 px-6">
+    <div className="max-w-6xl mx-auto">
+      <LegalFooter />
+    </div>
   </footer>
 );
 

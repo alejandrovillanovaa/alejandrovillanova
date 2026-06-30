@@ -1,31 +1,99 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Ayudo a negocios a atraer más clientes y ahorrar tiempo con tecnología. Presencia online, automatización e inteligencia artificial.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TODO: Set the document title to the name of your application -->
-    <title>Alejandro Villanova</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- TODO: Update og:title to match your application name -->
-    
-    
+    <!-- ── SEO Básico ────────────────────────────────────────── -->
+    <title>Alejandro Villanova — Tecnología para tu negocio</title>
+    <meta name="description" content="Ayudo a negocios a atraer más clientes y ahorrar tiempo con tecnología. Presencia online, automatización e inteligencia artificial." />
+    <meta name="author" content="Alejandro Villanova" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://alejandrovillanova.com" />
+
+    <!-- ── Open Graph (Facebook, LinkedIn, WhatsApp) ──────────── -->
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c5b0d83a-b11f-4b25-958c-f56da002435b/id-preview-76ec3c85--a8651892-36e7-4c60-83bd-9cc2836298e6.lovable.app-1774529154106.png">
+    <meta property="og:title" content="Alejandro Villanova — Tecnología para tu negocio" />
+    <meta property="og:description" content="Ayudo a negocios a atraer más clientes y ahorrar tiempo con tecnología." />
+    <meta property="og:url" content="https://alejandrovillanova.com" />
+    <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c5b0d83a-b11f-4b25-958c-f56da002435b/id-preview-76ec3c85--a8651892-36e7-4c60-83bd-9cc2836298e6.lovable.app-1774529154106.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Alejandro Villanova" />
+    <meta property="og:locale" content="es_ES" />
 
+    <!-- ── Twitter Card ───────────────────────────────────────── -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
-    <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c5b0d83a-b11f-4b25-958c-f56da002435b/id-preview-76ec3c85--a8651892-36e7-4c60-83bd-9cc2836298e6.lovable.app-1774529154106.png">
-    <meta property="og:title" content="Alejandro Villanova">
-  <meta name="twitter:title" content="Alejandro Villanova">
-  <meta property="og:description" content="Ayudo a negocios a atraer más clientes y ahorrar tiempo con tecnología. Presencia online, automatización e inteligencia artificial.">
-  <meta name="twitter:description" content="Ayudo a negocios a atraer más clientes y ahorrar tiempo con tecnología. Presencia online, automatización e inteligencia artificial.">
-</head>
+    <meta name="twitter:title" content="Alejandro Villanova — Tecnología para tu negocio" />
+    <meta name="twitter:description" content="Ayudo a negocios a atraer más clientes y ahorrar tiempo con tecnología." />
+    <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c5b0d83a-b11f-4b25-958c-f56da002435b/id-preview-76ec3c85--a8651892-36e7-4c60-83bd-9cc2836298e6.lovable.app-1774529154106.png" />
+
+    <!-- ── PWA / Móvil ────────────────────────────────────────── -->
+    <meta name="theme-color" content="#0d9488" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="A. Villanova" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- ── Íconos ─────────────────────────────────────────────── -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- ── Google Fonts (carga óptima con preconnect + display=swap) ── -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <!-- ── Datos estructurados (JSON-LD estático para crawlers) ── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Alejandro Villanova",
+      "url": "https://alejandrovillanova.com",
+      "description": "Ayudo a negocios a atraer más clientes y ahorrar tiempo con tecnología.",
+      "telephone": "+34622568843",
+      "jobTitle": "Consultor tecnológico para negocios",
+      "knowsAbout": ["Automatización de procesos", "Inteligencia Artificial", "Presencia online", "Desarrollo web"],
+      "sameAs": ["https://wa.me/34622568843"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Alejandro Villanova",
+      "url": "https://alejandrovillanova.com",
+      "description": "Ayudo a negocios a atraer más clientes y ahorrar tiempo con tecnología.",
+      "inLanguage": "es"
+    }
+    </script>
+  </head>
 
   <body>
     <div id="root"></div>
+    <!-- Fallback para usuarios sin JS: informa que la web necesita JS -->
+    <noscript>
+      <div style="padding:2rem;font-family:sans-serif;text-align:center">
+        <h1>Alejandro Villanova</h1>
+        <p>Tecnología para tu negocio. Esta web requiere JavaScript.</p>
+        <p>Contacto: <a href="tel:+34622568843">+34 622 56 88 43</a></p>
+      </div>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

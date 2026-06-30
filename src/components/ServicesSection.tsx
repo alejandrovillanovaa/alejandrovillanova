@@ -1,5 +1,8 @@
+import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import { Globe, Instagram, Layout, FileText, MessageSquare, CalendarCheck, Settings, Zap } from "lucide-react";
+
+const FloatingShapes = lazy(() => import("@/components/three/FloatingShapes"));
 
 const growth = [
   { icon: Globe, title: "Optimización de Google Maps" },
@@ -32,8 +35,13 @@ const ServiceCard = ({ icon: Icon, title, i }: { icon: any; title: string; i: nu
 
 const ServicesSection = () => {
   return (
-    <section id="servicios" className="section-padding bg-section-subtle">
-      <div className="max-w-6xl mx-auto">
+    <section id="servicios" className="section-padding bg-section-subtle relative overflow-hidden">
+      {/* 3D floating shapes */}
+      <Suspense fallback={null}>
+        <FloatingShapes count={10} color="#2dd4bf" />
+      </Suspense>
+
+      <div className="max-w-6xl mx-auto relative" style={{ zIndex: 1 }}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

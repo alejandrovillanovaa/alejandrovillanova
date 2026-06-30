@@ -13,7 +13,14 @@ const AboutSection = () => {
         >
           {/* Avatar placeholder */}
           <div className="flex justify-center">
-            <img src={aboutLogo} alt="Alejandro Villanova" className="w-56 h-56 rounded-2xl object-contain" />
+            <img
+              src={aboutLogo}
+              alt="Alejandro Villanova, consultor tecnológico para negocios"
+              className="w-56 h-56 rounded-2xl object-contain"
+              width="224"
+              height="224"
+              loading="lazy"
+            />
           </div>
 
           <div>

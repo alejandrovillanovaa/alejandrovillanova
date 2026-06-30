@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
@@ -35,6 +36,7 @@ const TestimonialsSection = () => {
   const [business, setBusiness] = useState("");
   const [message, setMessage] = useState("");
   const [rating, setRating] = useState(5);
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
 
   const { data: reviews = [] } = useQuery<Review[]>({
     queryKey: ["reviews"],
@@ -61,6 +63,7 @@ const TestimonialsSection = () => {
       setBusiness("");
       setMessage("");
       setRating(5);
+      setPrivacyAccepted(false);
       toast({ title: "¡Gracias!", description: "Tu reseña se ha enviado correctamente." });
     },
     onError: () => {
@@ -71,6 +74,10 @@ const TestimonialsSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !business.trim() || !message.trim()) return;
+    if (!privacyAccepted) {
+      toast({ title: "Consentimiento requerido", description: "Debes aceptar la política de privacidad para enviar tu reseña.", variant: "destructive" });
+      return;
+    }
     mutation.mutate();
   };
 
@@ -125,6 +132,27 @@ const TestimonialsSection = () => {
               <span className="text-sm text-muted-foreground">Puntuación:</span>
               <Stars count={rating} interactive onSelect={setRating} />
             </div>
+            {/* Consentimiento RGPD */}
+            <label className="flex items-start gap-3 cursor-pointer group">
+              <input
+                type="checkbox"
+                checked={privacyAccepted}
+                onChange={(e) => setPrivacyAccepted(e.target.checked)}
+                className="mt-0.5 accent-accent shrink-0"
+                required
+              />
+              <span className="text-sm text-muted-foreground leading-relaxed">
+                He leído y acepto la{" "}
+                <Link
+                  to="/privacidad"
+                  className="text-accent underline hover:text-accent/80"
+                >
+                  Política de Privacidad
+                </Link>{" "}
+                y consiento el tratamiento de mis datos para la publicación
+                de esta reseña.
+              </span>
+            </label>
             <Button type="submit" variant="accent" size="lg" className="w-full" disabled={mutation.isPending}>
               {mutation.isPending ? "Enviando..." : "Enviar reseña"}
             </Button>

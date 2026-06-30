@@ -1,11 +1,19 @@
+import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Phone } from "lucide-react";
 
+const ParticleField = lazy(() => import("@/components/three/ParticleField"));
+
 const CtaSection = () => {
   return (
-    <section id="contacto" className="section-padding bg-section-dark text-section-dark-foreground">
-      <div className="max-w-3xl mx-auto text-center">
+    <section id="contacto" className="section-padding bg-section-dark text-section-dark-foreground relative overflow-hidden">
+      {/* 3D particles */}
+      <Suspense fallback={null}>
+        <ParticleField count={120} color="#14b8a6" speed={0.4} />
+      </Suspense>
+
+      <div className="max-w-3xl mx-auto text-center relative" style={{ zIndex: 1 }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
