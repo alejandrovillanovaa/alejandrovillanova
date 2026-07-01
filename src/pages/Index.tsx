@@ -16,7 +16,7 @@ const Index = () => {
     <div className="min-h-screen">
       <SEOHead
         description="Ayudo a negocios a atraer más clientes y ahorrar tiempo con tecnología. Presencia online, automatización e inteligencia artificial."
-        canonicalUrl="https://alejandrovillanova.com"
+        canonicalUrl="https://villanovainnova.es"
         ogType="website"
       />
       <OrganizationJsonLd />

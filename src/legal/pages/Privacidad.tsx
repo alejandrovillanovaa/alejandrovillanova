@@ -27,12 +27,12 @@ const Privacidad = () => {
       <SEOHead
         title="Política de Privacidad"
         description="Política de Privacidad de Alejandro Villanova. Información sobre el tratamiento de datos personales según RGPD y LOPDGDD."
-        canonicalUrl="https://alejandrovillanova.com/privacidad"
+        canonicalUrl="https://villanovainnova.es/privacidad"
       />
       <BreadcrumbJsonLd
         items={[
-          { name: "Inicio", url: "https://alejandrovillanova.com" },
-          { name: "Política de Privacidad", url: "https://alejandrovillanova.com/privacidad" },
+          { name: "Inicio", url: "https://villanovainnova.es" },
+          { name: "Política de Privacidad", url: "https://villanovainnova.es/privacidad" },
         ]}
       />
       <LegalLayout title="Política de Privacidad">

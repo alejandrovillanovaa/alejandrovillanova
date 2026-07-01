@@ -17,12 +17,12 @@ const Cookies = () => {
       <SEOHead
         title="Política de Cookies"
         description="Política de Cookies de Alejandro Villanova. Información sobre las cookies utilizadas, su finalidad y cómo gestionarlas."
-        canonicalUrl="https://alejandrovillanova.com/cookies"
+        canonicalUrl="https://villanovainnova.es/cookies"
       />
       <BreadcrumbJsonLd
         items={[
-          { name: "Inicio", url: "https://alejandrovillanova.com" },
-          { name: "Política de Cookies", url: "https://alejandrovillanova.com/cookies" },
+          { name: "Inicio", url: "https://villanovainnova.es" },
+          { name: "Política de Cookies", url: "https://villanovainnova.es/cookies" },
         ]}
       />
       <LegalLayout title="Política de Cookies">

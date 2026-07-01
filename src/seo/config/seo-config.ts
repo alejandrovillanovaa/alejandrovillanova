@@ -13,7 +13,7 @@ import type { SiteSEOConfig, OrganizationSchema } from "./types";
 /* ── Configuración global de SEO ────────────────────────────────── */
 export const SEO_CONFIG: SiteSEOConfig = {
   siteName: "Alejandro Villanova",
-  siteUrl: "https://alejandrovillanova.com",
+  siteUrl: "https://villanovainnova.es",
   defaultDescription:
     "Ayudo a negocios a atraer más clientes y ahorrar tiempo con tecnología. Presencia online, automatización e inteligencia artificial.",
   defaultTitle: "Tecnología para tu negocio",
@@ -39,7 +39,7 @@ export const ORGANIZATION_SCHEMA: OrganizationSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Alejandro Villanova",
-  url: "https://alejandrovillanova.com",
+  url: "https://villanovainnova.es",
   description:
     "Ayudo a negocios a atraer más clientes y ahorrar tiempo con tecnología. Consultoría tecnológica, automatización e inteligencia artificial para negocios locales.",
   email: "",

@@ -27,7 +27,7 @@ interface SitemapRoute {
 }
 
 /* ── Configuración del sitio ────────────────────────────────────── */
-const SITE_URL = "https://alejandrovillanova.com";
+const SITE_URL = "https://villanovainnova.es";
 
 // ⚠️ Mantén esto sincronizado con src/seo/config/seo-config.ts
 const ROUTES: SitemapRoute[] = [

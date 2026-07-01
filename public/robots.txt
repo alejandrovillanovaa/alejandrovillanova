@@ -2,7 +2,7 @@
 # Permite el rastreo completo a todos los bots relevantes
 # e indica la ubicación del sitemap.
 
-Sitemap: https://alejandrovillanova.com/sitemap.xml
+Sitemap: https://villanovainnova.es/sitemap.xml
 
 User-agent: Googlebot
 Allow: /

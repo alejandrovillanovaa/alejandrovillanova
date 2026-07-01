@@ -28,12 +28,12 @@ const AvisoLegal = () => {
       <SEOHead
         title="Aviso Legal"
         description="Aviso Legal y condiciones generales de uso del sitio web de Alejandro Villanova. Datos de identificación del titular según LSSI-CE."
-        canonicalUrl="https://alejandrovillanova.com/aviso-legal"
+        canonicalUrl="https://villanovainnova.es/aviso-legal"
       />
       <BreadcrumbJsonLd
         items={[
-          { name: "Inicio", url: "https://alejandrovillanova.com" },
-          { name: "Aviso Legal", url: "https://alejandrovillanova.com/aviso-legal" },
+          { name: "Inicio", url: "https://villanovainnova.es" },
+          { name: "Aviso Legal", url: "https://villanovainnova.es/aviso-legal" },
         ]}
       />
       <LegalLayout title="Aviso Legal">

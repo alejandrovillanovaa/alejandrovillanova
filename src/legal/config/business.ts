@@ -45,7 +45,7 @@ export const BUSINESS: BusinessConfig = {
   },
 
   /* ── Web ────────────────────────────────────────────────────── */
-  siteUrl: "https://alejandrovillanova.com",
+  siteUrl: "https://villanovainnova.es",
 
   /* ── Redes sociales ─────────────────────────────────────────── */
   social: {
