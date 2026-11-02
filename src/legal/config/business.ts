@@ -18,11 +18,9 @@
  *
  *   1. legalName          → tu nombre y apellidos (o razón social).
  *   2. taxId              → tu NIF / DNI.
- *   3. address.street     → calle, número y piso (ej: "Calle Mayor 1, 2º A").
- *   4. address.city       → ciudad (ej: "Valencia").
- *   5. address.postalCode → código postal (ej: "46001").
- *   6. address.province   → provincia (ej: "Valencia").
- *   7. email              → correo de contacto (ej: "hola@villanovainnova.es").
+ *   3. email              → correo de contacto (ej: "hola@villanovainnova.es").
+ *   4. address.street     → (opcional) calle y número, solo si usas domicilio fiscal.
+ *   5. address.postalCode → (opcional) código postal.
  *
  * Los campos que dejes vacíos simplemente no se muestran en la web.
  */
@@ -37,10 +35,10 @@ export const BUSINESS: BusinessConfig = {
 
   /* ── Dirección ──────────────────────────────────────────────── */
   address: {
-    street: "", // ⬇️ RELLENAR: "Calle Mayor 1, 2º A"
-    city: "", // ⬇️ RELLENAR: "Valencia"
-    postalCode: "", // ⬇️ RELLENAR: "46001"
-    province: "", // ⬇️ RELLENAR: "Valencia"
+    street: "", // Opcional: calle y número (solo si usas domicilio fiscal)
+    city: "Granada",
+    postalCode: "", // Opcional: "18001"–"18015"
+    province: "Granada",
     country: "España",
   },
 
