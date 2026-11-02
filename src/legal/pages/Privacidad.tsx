@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import LegalLayout from "../components/LegalLayout";
 import { BUSINESS } from "../config/business";
 import { LegalField, If } from "../utils/render-field";
@@ -57,14 +58,14 @@ const Privacidad = () => {
           puntuación que voluntariamente nos proporcionas al dejar una reseña.
         </li>
         <li>
-          <strong>Datos de navegación:</strong> dirección IP, tipo de
-          navegador, sistema operativo, páginas visitadas y tiempo de estancia
-          (solo si aceptas cookies de análisis).
+          <strong>Datos de navegación:</strong> dirección IP y metadatos
+          técnicos que tu navegador envía al conectar con el sitio (necesarios
+          para el funcionamiento y la seguridad del servicio).
         </li>
         <li>
-          <strong>Cookies:</strong> información sobre tus preferencias de
-          navegación. Consulta la{" "}
-          <a href="/cookies">Política de Cookies</a> para más detalle.
+          <strong>Cookies:</strong> almacenamos tu preferencia de
+          consentimiento de cookies. Consulta la{" "}
+          <Link to="/cookies">Política de Cookies</Link> para más detalle.
         </li>
       </ul>
       <p>
@@ -119,7 +120,7 @@ const Privacidad = () => {
         </li>
         <li>
           <strong>Cookies:</strong> según lo indicado en la{" "}
-          <a href="/cookies">Política de Cookies</a>.
+          <Link to="/cookies">Política de Cookies</Link>.
         </li>
       </ul>
 

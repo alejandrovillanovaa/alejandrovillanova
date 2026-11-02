@@ -33,21 +33,5 @@ export const COOKIE_CONFIG: CookieConfig = {
         },
       ],
     },
-    {
-      id: "external-fonts",
-      name: "Fuentes externas",
-      required: false,
-      description:
-        "Google Fonts carga las tipografías del sitio desde servidores externos. Tu dirección IP se envía a Google LLC en Estados Unidos.",
-      items: [
-        {
-          name: "Google Fonts (fonts.googleapis.com)",
-          duration: "Persistente (la fuente se almacena en caché del navegador)",
-          purpose:
-            "Carga de las fuentes tipográficas Inter y Space Grotesk necesarias para la visualización del sitio.",
-          provider: "Google LLC",
-        },
-      ],
-    },
   ],
 };

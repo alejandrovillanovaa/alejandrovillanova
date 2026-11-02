@@ -27,6 +27,8 @@ const CookieBanner = () => {
     dismiss,
   } = useCookieConsent();
 
+  const hasOptional = COOKIE_CONFIG.categories.some((c) => !c.required);
+
   return (
     <AnimatePresence>
       {visible && (
@@ -57,10 +59,9 @@ const CookieBanner = () => {
                   Este sitio usa cookies
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Usamos cookies propias y de terceros para mejorar tu
-                  experiencia y mostrar contenido externo. Puedes
-                  aceptarlas, rechazar las no esenciales o configurar tus
-                  preferencias.{" "}
+                  Usamos una cookie técnica propia para recordar tu
+                  configuración de consentimiento. No usamos cookies
+                  publicitarias ni de seguimiento.{" "}
                   <Link
                     to="/cookies"
                     className="text-accent underline hover:text-accent/80"
@@ -125,20 +126,22 @@ const CookieBanner = () => {
 
             {/* ── Botones ───────────────────────────────────── */}
             <div className="flex flex-col sm:flex-row gap-2">
-              <button
-                onClick={() => setExpanded(!expanded)}
-                className="flex items-center justify-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors py-2 px-4 rounded-lg hover:bg-muted"
-                aria-expanded={expanded}
-              >
-                Configurar
-                {expanded ? (
-                  <ChevronUp className="w-4 h-4" aria-hidden="true" />
-                ) : (
-                  <ChevronDown className="w-4 h-4" aria-hidden="true" />
-                )}
-              </button>
+              {hasOptional && (
+                <button
+                  onClick={() => setExpanded(!expanded)}
+                  className="flex items-center justify-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors py-2 px-4 rounded-lg hover:bg-muted"
+                  aria-expanded={expanded}
+                >
+                  Configurar
+                  {expanded ? (
+                    <ChevronUp className="w-4 h-4" aria-hidden="true" />
+                  ) : (
+                    <ChevronDown className="w-4 h-4" aria-hidden="true" />
+                  )}
+                </button>
+              )}
               <div className="flex-1" />
-              {expanded && (
+              {expanded && hasOptional && (
                 <button
                   onClick={saveCustom}
                   className="text-sm font-medium border border-border bg-background text-foreground hover:bg-muted py-2.5 px-6 rounded-xl transition-colors"
@@ -146,17 +149,19 @@ const CookieBanner = () => {
                   Guardar selección
                 </button>
               )}
-              <button
-                onClick={rejectAll}
-                className="text-sm font-medium border border-border bg-background text-foreground hover:bg-muted py-2.5 px-6 rounded-xl transition-colors"
-              >
-                Rechazar
-              </button>
+              {hasOptional && (
+                <button
+                  onClick={rejectAll}
+                  className="text-sm font-medium border border-border bg-background text-foreground hover:bg-muted py-2.5 px-6 rounded-xl transition-colors"
+                >
+                  Rechazar
+                </button>
+              )}
               <button
                 onClick={acceptAll}
                 className="text-sm font-medium bg-accent text-accent-foreground hover:bg-accent/90 py-2.5 px-6 rounded-xl transition-colors shadow-lg shadow-accent/25"
               >
-                Aceptar todas
+                {hasOptional ? "Aceptar todas" : "Entendido"}
               </button>
             </div>
           </div>

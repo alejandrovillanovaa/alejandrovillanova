@@ -10,25 +10,42 @@
  * 🔒 Cumple con: LSSI-CE, RGPD, LOPDGDD.
  */
 
+/* ⚠️⚠️⚠️  DATOS OBLIGATORIOS QUE DEBES RELLENAR A MANO  ⚠️⚠️⚠️
+ *
+ * Sin estos datos el Aviso Legal y la Política de Privacidad
+ * quedan incompletos (riesgo de sanción LSSI-CE art. 10 y RGPD).
+ * Rellena los campos marcados más abajo con "⬇️ RELLENAR":
+ *
+ *   1. legalName          → tu nombre y apellidos (o razón social).
+ *   2. taxId              → tu NIF / DNI.
+ *   3. address.street     → calle, número y piso (ej: "Calle Mayor 1, 2º A").
+ *   4. address.city       → ciudad (ej: "Valencia").
+ *   5. address.postalCode → código postal (ej: "46001").
+ *   6. address.province   → provincia (ej: "Valencia").
+ *   7. email              → correo de contacto (ej: "hola@villanovainnova.es").
+ *
+ * Los campos que dejes vacíos simplemente no se muestran en la web.
+ */
+
 import type { BusinessConfig } from "./types";
 
 export const BUSINESS: BusinessConfig = {
   /* ── Identidad ──────────────────────────────────────────────── */
   brandName: "Alejandro Villanova",
-  legalName: "", // Ej: "Alejandro Villanova García"
-  taxId: "", // Ej: "12345678Z"
+  legalName: "", // ⬇️ RELLENAR: "Alejandro Villanova García"
+  taxId: "", // ⬇️ RELLENAR: "12345678Z"
 
   /* ── Dirección ──────────────────────────────────────────────── */
   address: {
-    street: "", // Ej: "Calle Mayor 1, 2º A"
-    city: "", // Ej: "Valencia"
-    postalCode: "", // Ej: "46001"
-    province: "", // Ej: "Valencia"
+    street: "", // ⬇️ RELLENAR: "Calle Mayor 1, 2º A"
+    city: "", // ⬇️ RELLENAR: "Valencia"
+    postalCode: "", // ⬇️ RELLENAR: "46001"
+    province: "", // ⬇️ RELLENAR: "Valencia"
     country: "España",
   },
 
   /* ── Contacto ───────────────────────────────────────────────── */
-  email: "", // Ej: "hola@ejemplo.com"
+  email: "", // ⬇️ RELLENAR: "hola@villanovainnova.es"
   privacyEmail: "", // Si es distinto del anterior; si no, déjalo vacío y se usará email
   phone: "+34 622 56 88 43",
 
@@ -58,27 +75,18 @@ export const BUSINESS: BusinessConfig = {
   activity: "Servicios de consultoría tecnológica para negocios",
 
   /* ── Fecha de última revisión de los textos legales ─────────── */
-  lastUpdated: "28 de junio de 2026",
+  lastUpdated: "2 de noviembre de 2026",
 
   /* ── Servicios de terceros que tratan datos ─────────────────── */
   thirdPartyServices: [
     {
       name: "Supabase Inc.",
       purpose:
-        "Alojamiento de la base de datos de reseñas. Puede tener acceso a nombre, negocio, mensaje y puntuación que introduces en el formulario.",
+        "Alojamiento de la base de datos de reseñas. Puede tener acceso a nombre, negocio, mensaje y puntuación que introduces en el formulario, así como a la dirección IP y metadatos técnicos de la conexión.",
       privacyUrl: "https://supabase.com/privacy",
       location: "Estados Unidos (fuera de la Unión Europea)",
       safeguard:
         "Supabase cumple con cláusulas contractuales tipo aprobadas por la Comisión Europea y aplica medidas de seguridad equivalentes al RGPD.",
-    },
-    {
-      name: "Google Fonts",
-      purpose:
-        "Carga de fuentes tipográficas. Tu dirección IP se envía a servidores de Google LLC cuando tu navegador solicita las fuentes.",
-      privacyUrl: "https://policies.google.com/privacy",
-      location: "Estados Unidos (fuera de la Unión Europea)",
-      safeguard:
-        "Google LLC está adherido al Data Privacy Framework entre la UE y EEUU.",
     },
   ],
 };

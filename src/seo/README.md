@@ -124,7 +124,7 @@ Usa esta checklist para cada proyecto de cliente:
 - [x] `webmanifest` para PWA básica
 - [x] `<meta name="theme-color">`
 - [x] `favicon.ico` < 4KB
-- [x] `preconnect` para Google Fonts
+- [x] Fuentes autoalojadas en `/fonts` (sin Google Fonts → RGPD)
 - [x] Imagen OG con URL permanente (no preview/temporal)
 - [x] Lazy loading en imágenes (`loading="lazy"`)
 - [x] `aria-label` en elementos interactivos
